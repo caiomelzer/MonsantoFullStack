@@ -1,0 +1,32 @@
+<mat-toolbar>Farmer Details</mat-toolbar>
+<mat-dialog-content>
+	<mat-list>
+		<mat-list-item>Name: {{farmer.name}}</mat-list-item>
+		<mat-list-item>ID: {{farmer.id}}</mat-list-item>
+		<mat-divider></mat-divider>
+		<mat-list-item >
+			Document Number: {{farmer.document.documentNumber ? farmer.document.documentNumber  : ' - - - '}}
+		</mat-list-item>
+		<mat-list-item >
+			Document Type: {{farmer.document.documentType ? farmer.document.documentType  : ' - - - '}}
+		</mat-list-item>
+		<mat-divider></mat-divider>
+		<mat-list-item >
+			Addres: {{farmer.address?.address}}
+		</mat-list-item>
+		<mat-list-item >
+			Street: {{farmer.address?.street}}
+		</mat-list-item>
+		<mat-list-item >
+			State: {{farmer.address?.state}}
+		</mat-list-item>
+		<mat-list-item >
+			Country: {{farmer.address?.country}}
+		</mat-list-item>
+	</mat-list>
+
+</mat-dialog-content>
+<mat-divider></mat-divider>
+<mat-dialog-actions>
+    <button (click)="close()" mat-flat-button color="warn">Close</button>
+</mat-dialog-actions>

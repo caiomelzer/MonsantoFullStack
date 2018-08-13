@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <span>Farmer's Search</span>
+</mat-toolbar>
+<div class="form">
+  <mat-form-field>
+    <mat-label><mat-icon matSuffix>search</mat-icon> Name or Doc#</mat-label>
+    <input (keyup)="inputSearchFarmer($event)" matInput placeholder="">
+  </mat-form-field>
+</div>
+<div class="result">
+  	<mat-list *ngIf="farmers.length > 0 && farmers.length !== 'undefined'">
+	  	<mat-card *ngFor="let farmer of farmers" (click)="getFarmer(farmer)">
+			<mat-form-field>
+			    <mat-label>Doc#</mat-label>
+			    <input [disabled]="true" matInput value="{{farmer.document.documentNumber}}">
+			</mat-form-field>
+			<mat-form-field>
+			    <mat-label>Name#</mat-label>
+			    <input [disabled]="true" matInput value="{{farmer.name}}">
+			</mat-form-field>
+	    </mat-card>
+    </mat-list>
+    <mat-card *ngIf="farmers.length === 0">Nothing to show based on search criteria...</mat-card>
+</div>
+
