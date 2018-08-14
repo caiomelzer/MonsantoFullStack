@@ -12,7 +12,6 @@ export class FarmerDetailComponent implements OnInit {
   	constructor(public dialogRef: MatDialogRef<FarmerDetailComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   	ngOnInit() {
-  		console.log(this.data);
   		this.farmer = this.data;
   	}
   	close(){

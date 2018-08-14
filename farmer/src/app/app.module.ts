@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ModuleWithProviders } from "@angular/core";
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'; 
+import { FormsModule } from '@angular/forms';
+
 
 
 import { AppComponent } from './app.component';
 
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatCheckboxModule} from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -24,6 +27,8 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { FarmerComponent } from './farmer/farmer.component';
 import { FarmerDetailComponent } from './farmer-detail/farmer-detail.component';
+
+import { FarmerService } from './farmer/farmer.service'
 
 
 
@@ -45,7 +50,6 @@ const appRoutes: Routes = [
     	HttpModule,
 	    BrowserModule,
 	    BrowserAnimationsModule,
-	    MatButtonModule, 
 	    MatCheckboxModule,
 	    MatGridListModule,
 	    MatFormFieldModule,
@@ -56,9 +60,11 @@ const appRoutes: Routes = [
 	    MatListModule,
 	    MatDialogModule,
 	    MatDividerModule,
-	    MatButtonModule
+	    MatButtonModule,
+	    HttpClientModule,
+	    FormsModule
 	  ],
-	  providers: [],
+	  providers: [FarmerService],
 	  entryComponents: [FarmerDetailComponent],
 	  bootstrap: [AppComponent]
 })

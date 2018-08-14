@@ -14,14 +14,28 @@ app.get('/farmer', function (req, res) {
             name: 'Joao Castro',
             document: {
               documentNumber: '789317289731',
-            documentType: 'CPF'
+              documentType: 'CPF'
+            },
+            address:{
+              street: 'Rua X',
+              state: 'SP',
+              address: 'Fazendo ABC',
+              country: 'Brasil'
+            } 
           },
-          address:{
-            street: 'Rua X',
-            state: 'SP',
-            address: 'Fazendo ABC',
-            country: 'Brasil'
-          } 
+          {
+            id: '12312312',
+            name: 'Joao Silva',
+            document: {
+              documentNumber: '1231231231231',
+              documentType: 'CPF'
+            },
+            address:{
+              street: 'Rua X',
+              state: 'SP',
+              address: 'Fazendo ABC',
+              country: 'Brasil'
+            } 
           }
         ]
   	); 

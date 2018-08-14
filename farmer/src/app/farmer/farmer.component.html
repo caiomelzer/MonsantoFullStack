@@ -4,7 +4,7 @@
 <div class="form">
   <mat-form-field>
     <mat-label><mat-icon matSuffix>search</mat-icon> Name or Doc#</mat-label>
-    <input (keyup)="inputSearchFarmer($event)" matInput placeholder="">
+    <input (keyup)="inputSearchFarmer($event)" [(ngModel)]="searchField" matInput placeholder="">
   </mat-form-field>
 </div>
 <div class="result">
